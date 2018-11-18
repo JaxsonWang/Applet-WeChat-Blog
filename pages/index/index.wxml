@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="desc">
+  <image src="{{desc.image}}" mode="widthFix" class="indexImage"></image>
+  <text>{{desc.text}}</text>
+</view>

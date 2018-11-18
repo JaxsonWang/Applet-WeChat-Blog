@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index1/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"black",
+    "navigationBarBackgroundColor": "#2196f3",
+    "navigationBarTitleText": "淮城一只猫",
+    "navigationBarTextStyle":"light"
+  }
+}
