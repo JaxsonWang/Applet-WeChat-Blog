@@ -1,0 +1,8 @@
+<import src="../template/footer.wxml"/>
+<view class="detail-header">
+    <image src="https://cdn.iiong.com/201810/what-is-back-end-development.png" mode="widthFix" class="detail-image"></image>
+</view>
+<view>
+    {{ test1 }}
+</view>
+<template is="footer"/>

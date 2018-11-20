@@ -1,7 +1,5 @@
-/**index.wxss**/
-.index-image {
-  width: 100%;
-}
+@import "../template/header.wxss";
+@import "../template/footer.wxss";
 
 .article-list {
   flex-direction: column;

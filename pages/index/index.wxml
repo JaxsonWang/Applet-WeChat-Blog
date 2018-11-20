@@ -1,7 +1,6 @@
-<!--index.wxml-->
-<view class="desc">
-  <image src="{{desc.image}}" mode="widthFix" class="index-image"></image>
-</view>
+<import src="../template/header.wxml"/>
+<import src="../template/footer.wxml"/>
+<template is="header" data="{{desc}}" />
 <view class="container">
   <view class="page-body">
     <view class="page-section">
@@ -9,7 +8,7 @@
         <text>文章列表</text>
       </view>
       <view class="flex-wrp article-list">
-        <view class="flex-item article-item">
+        <view class="flex-item article-item" bindtap="toDetail">
           <image src="https://cdn.iiong.com/201810/what-is-back-end-development.png" mode="widthFix" class="article-image"></image>
           <view class="article-header">
             <view class="article-title">Node.js后端开发笔记</view>
@@ -34,3 +33,4 @@
     </view>
   </view>
 </view>
+<template is="footer"/>

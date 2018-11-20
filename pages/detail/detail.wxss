@@ -1,0 +1,9 @@
+@import "../template/footer.wxss";
+
+.detail-header {
+    width: 100%;
+}
+
+.detail-image {
+    width: 100%;
+}

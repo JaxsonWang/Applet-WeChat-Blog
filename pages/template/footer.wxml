@@ -1,0 +1,5 @@
+<template name="footer">
+  <view class="page-footer">
+    <text>淮城一只猫</text>
+  </view>
+</template>
