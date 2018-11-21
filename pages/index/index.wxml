@@ -1,5 +1,6 @@
 <import src="../template/header.wxml"/>
 <import src="../template/footer.wxml"/>
+<wxs module="formatTime" src="../../utils/formatTime.wxs"></wxs>
 <template is="header" data="{{desc}}" />
 <view class="container">
   <view class="page-body">
@@ -8,25 +9,11 @@
         <text>文章列表</text>
       </view>
       <view class="flex-wrp article-list">
-        <view class="flex-item article-item" bindtap="toDetail">
-          <image src="https://cdn.iiong.com/201810/what-is-back-end-development.png" mode="widthFix" class="article-image"></image>
+        <view class="flex-item article-item" bindtap="toDetail" wx:for="{{postList}}" wx:key="{{item.id}}" id="{{item.id}}">
+          <image src="{{item.feature_image}}" mode="widthFix" class="article-image"></image>
           <view class="article-header">
-            <view class="article-title">Node.js后端开发笔记</view>
-            <view class="article-info">2018年10月22日 22:10 / 奇淫技巧</view>
-          </view>
-        </view>
-        <view class="flex-item article-item">
-          <image src="https://cdn.iiong.com/201811/javascript.jpeg" mode="widthFix" class="article-image"></image>
-          <view class="article-header">
-            <view class="article-title">JavaScript异步加载脚本</view>
-            <view class="article-info">2018年11月04日 20:40 / 奇淫技巧</view>
-          </view>
-        </view>
-        <view class="flex-item article-item">
-          <image src="https://cdn.iiong.com/201810/1_sso_vplej49wti_ubptvgq.png" mode="widthFix" class="article-image"></image>
-          <view class="article-header">
-            <view class="article-title">TypeScript学习笔记</view>
-            <view class="article-info">2018年10月17日 23:49 / 编程技术</view>
+            <view class="article-title">{{item.title}}</view>
+            <view class="article-info">{{formatTime.formatTime(item.created_at)}}</view>
           </view>
         </view>
       </view>

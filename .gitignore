@@ -15,3 +15,6 @@ node_modules/
 
 project.config.json
 .idea
+node_modules/
+miniprogram_npm/
+package-lock.json

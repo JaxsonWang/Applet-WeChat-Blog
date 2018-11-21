@@ -1,13 +1,18 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/detail/detail",
-    "pages/index1/index"
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"black",
     "navigationBarBackgroundColor": "#2196f3",
     "navigationBarTitleText": "淮城一只猫",
     "navigationBarTextStyle":"light"
-  }
+  },
+  "plugins": {
+    "htmltowxml": {
+        "version": "1.3.0",
+        "provider": "wxa51b9c855ae38f3c"
+    }
+}
 }

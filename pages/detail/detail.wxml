@@ -1,8 +1,13 @@
 <import src="../template/footer.wxml"/>
+<wxs module="formatTime" src="../../utils/formatTime.wxs"></wxs>
 <view class="detail-header">
-    <image src="https://cdn.iiong.com/201810/what-is-back-end-development.png" mode="widthFix" class="detail-image"></image>
+    <image src="{{postsDetail.feature_image}}" mode="widthFix" class="detail-image"></image>
 </view>
-<view>
-    {{ test1 }}
+<view class="detail-title">
+    <view class="title">{{postsDetail.title}}</view>
+    <view class="time">{{formatTime.formatTime(postsDetail.created_at)}}</view>
+</view>
+<view class="detail-main">
+   <htmltowxml highlightStyle="tomorrow" linenums="false" text="{{postsDetail.html}}" />
 </view>
 <template is="footer"/>
