@@ -1,18 +1,16 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/detail/detail"
+  "pages": [
+    "pages/index/index"
   ],
-  "window":{
-    "backgroundTextStyle":"black",
-    "navigationBarBackgroundColor": "#2196f3",
-    "navigationBarTitleText": "淮城一只猫",
-    "navigationBarTextStyle":"light"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
   },
-  "plugins": {
-    "htmltowxml": {
-        "version": "1.3.0",
-        "provider": "wxa51b9c855ae38f3c"
-    }
-}
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
 }

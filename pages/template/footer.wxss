@@ -1,8 +1,0 @@
-.page-footer {
-    text-align: center;
-}
-
-.page-footer text {
-    font-size: 12px;
-    color: #333
-}

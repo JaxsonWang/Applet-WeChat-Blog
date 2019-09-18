@@ -1,5 +1,0 @@
-<template name="header">
-  <view class="desc">
-    <image src="{{desc.image}}" mode="widthFix" class="index-image"></image>
-  </view>
-</template>

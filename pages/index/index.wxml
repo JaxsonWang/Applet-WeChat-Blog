@@ -1,23 +1,32 @@
-<import src="../template/header.wxml"/>
-<import src="../template/footer.wxml"/>
-<wxs module="formatTime" src="../../utils/formatTime.wxs"></wxs>
-<template is="header" data="{{desc}}" />
-<view class="container">
-  <view class="page-body">
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>文章列表</text>
-      </view>
-      <view class="flex-wrp article-list">
-        <view class="flex-item article-item" bindtap="toDetail" wx:for="{{postList}}" wx:key="{{item.id}}" id="{{item.id}}">
-          <image src="{{item.feature_image}}" mode="widthFix" class="article-image"></image>
-          <view class="article-header">
-            <view class="article-title">{{item.title}}</view>
-            <view class="article-info">{{formatTime.formatTime(item.created_at)}}</view>
+<scroll-view scroll-y class="scrollPage">
+  <image src="/images/header.png" mode="widthFix" class="png header-bg"/>
+  <view class="post-card-list">
+    <view class="cu-card case">
+      <view class="cu-item shadow" wx:for="{{postList}}" wx:key="item.id">
+        <view class="image">
+          <image src="{{item.feature_image}}" mode="widthFix"/>
+          <view class="cu-tag bg-blue">{{item.tags[0].name}}</view>
+          <view class="cu-bar bg-shadeBottom">
+            <text class="text-cut">{{item.excerpt}}</text>
+          </view>
+        </view>
+        <view class="cu-list menu-avatar">
+          <view class="cu-item">
+            <view class="cu-avatar round lg" style="background-image:url('{{item.authors[0].profile_image}}');"></view>
+            <view class="content flex-sub">
+              <view class="text-grey">{{item.title}}</view>
+              <view class="text-gray text-sm flex justify-between">
+                {{item.published_at}}
+<!--                <view class="text-gray text-sm">-->
+<!--                  <text class="cuIcon-attentionfill margin-lr-xs"></text> 10-->
+<!--                  <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20-->
+<!--                  <text class="cuIcon-messagefill margin-lr-xs"></text> 30-->
+<!--                </view>-->
+              </view>
+            </view>
           </view>
         </view>
       </view>
     </view>
   </view>
-</view>
-<template is="footer"/>
+</scroll-view>
