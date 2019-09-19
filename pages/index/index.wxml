@@ -1,32 +1,34 @@
 <scroll-view scroll-y class="scrollPage">
-  <image src="/images/header.png" mode="widthFix" class="png header-bg"/>
-  <view class="post-card-list">
-    <view class="cu-card case">
-      <view class="cu-item shadow" wx:for="{{postList}}" wx:key="item.id">
-        <view class="image">
-          <image src="{{item.feature_image}}" mode="widthFix"/>
-          <view class="cu-tag bg-blue">{{item.tags[0].name}}</view>
-          <view class="cu-bar bg-shadeBottom">
-            <text class="text-cut">{{item.excerpt}}</text>
-          </view>
-        </view>
-        <view class="cu-list menu-avatar">
-          <view class="cu-item">
-            <view class="cu-avatar round lg" style="background-image:url('{{item.authors[0].profile_image}}');"></view>
-            <view class="content flex-sub">
-              <view class="text-grey">{{item.title}}</view>
-              <view class="text-gray text-sm flex justify-between">
-                {{item.published_at}}
-<!--                <view class="text-gray text-sm">-->
-<!--                  <text class="cuIcon-attentionfill margin-lr-xs"></text> 10-->
-<!--                  <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20-->
-<!--                  <text class="cuIcon-messagefill margin-lr-xs"></text> 30-->
-<!--                </view>-->
-              </view>
+    <image src="/images/header.png" mode="widthFix" class="png header-bg"/>
+    <view class="post-card-list">
+        <view class="cu-card case">
+            <view class="cu-item shadow" wx:for="{{postList}}" wx:key="item.id" data-post-id="{{item.id}}" bindtap="goToDetail">
+                <view class="image">
+                    <image src="{{item.feature_image}}" mode="widthFix"/>
+                    <view class="cu-tag bg-blue">{{item.tags[0].name}}</view>
+                    <view class="cu-bar bg-shadeBottom">
+                        <text class="text-cut">{{item.excerpt}}</text>
+                    </view>
+                </view>
+                <view class="cu-list menu-avatar">
+                    <view class="cu-item">
+                        <view class="cu-avatar round lg" style="background-image:url({{item.authors[0].profile_image}});"></view>
+                        <view class="content flex-sub flex justify-between">
+                            <view class="text-grey">{{item.title}}</view>
+                            <view class="text-gray text-sm text-right">
+                                {{item.published_time}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
             </view>
-          </view>
         </view>
-      </view>
     </view>
-  </view>
+    <view class="no-data-tips" wx:if="{{hasData}}">
+        <view class="flex-sub text-center">
+            <view class="solid-bottom text-xs padding-bottom-sm">
+                <text class="text-gray">数据已经加载完毕</text>
+            </view>
+        </view>
+    </view>
 </scroll-view>

@@ -2,3 +2,7 @@
     width: 100%;
     height: 486rpx
 }
+
+.post-card-list {
+    position: relative;
+}
