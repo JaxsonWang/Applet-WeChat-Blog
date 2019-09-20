@@ -22,7 +22,6 @@ Page({
       include: 'tags,authors'
     };
     app.request.requestGetApi(url, params, self, (response, self) => {
-      console.log(response)
       self.setData({
         postData: response.posts[0]
       })

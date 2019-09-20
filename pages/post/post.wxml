@@ -1,3 +1,4 @@
 <cu-custom bgColor="bg-gradual-blue">
   <view slot="content">ColorUI 空白模板</view>
 </cu-custom>
+<rich-text nodes="{{postData.html}}"/>
