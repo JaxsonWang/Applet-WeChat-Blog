@@ -1,4 +1,19 @@
 <cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">ColorUI 空白模板</view>
+  <view slot="content">{{ postData.title }}</view>
 </cu-custom>
-<rich-text nodes="{{postData.html}}"/>
+<view class="post-view">
+  <wxparse data="{{ postData.html }}" type="html"/>
+</view>
+<view class="post-view margin-tb-lg">
+  <view class="post-copyright">
+    <view class="item post-copyright-author">
+      <strong>文章作者： </strong>{{ postData.authors[0].name }}
+    </view>
+    <view class="item post-copyright-link">
+      <strong>文章链接：</strong><a href="{{ postData.url }}" title="Hello,World">{{ postData.url }}</a>
+    </view>
+    <view class="item post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+    </view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+/*
+Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #444;
+}
+
+.hljs .hljs-keyword,
+.hljs .hljs-selector-tag,
+.hljs .hljs-literal,
+.hljs .hljs-section,
+.hljs .hljs-link {
+  color: white;
+}
+
+.hljs,
+.hljs .hljs-subst {
+  color: #ddd;
+}
+
+.hljs .hljs-string,
+.hljs .hljs-title,
+.hljs .hljs-name,
+.hljs .hljs-type,
+.hljs .hljs-attribute,
+.hljs .hljs-symbol,
+.hljs .hljs-bullet,
+.hljs .hljs-built_in,
+.hljs .hljs-addition,
+.hljs .hljs-variable,
+.hljs .hljs-template-tag,
+.hljs .hljs-template-variable {
+  color: #d88;
+}
+
+.hljs .hljs-comment,
+.hljs .hljs-quote,
+.hljs .hljs-deletion,
+.hljs .hljs-meta {
+  color: #777;
+}
+
+.hljs .hljs-keyword,
+.hljs .hljs-selector-tag,
+.hljs .hljs-literal,
+.hljs .hljs-title,
+.hljs .hljs-section,
+.hljs .hljs-doctag,
+.hljs .hljs-type,
+.hljs .hljs-name,
+.hljs .hljs-strong {
+  font-weight: bold;
+}
+
+.hljs .hljs-emphasis {
+  font-style: italic;
+}

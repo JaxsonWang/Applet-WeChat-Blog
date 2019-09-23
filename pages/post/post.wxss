@@ -1,0 +1,21 @@
+@import '../../utils/richTextParse/richText.wxss';
+
+page {
+    background-color: #fff;
+}
+
+.post-view {
+    padding: 0 30rpx;
+}
+
+.post-copyright {
+    padding: 15rpx 30rpx;
+    border-left: .3rem solid #000;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.post-copyright .item {
+    text-align: -webkit-match-parent;
+    padding: 5rpx 0;
+}
