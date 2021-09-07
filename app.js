@@ -1,8 +1,9 @@
-import {apiUrl, contentAPIKey} from './config';
+import {apiUrl, contentAPIKey, apiVersion} from './config';
 
 const request = require('./utils/request');
 
 App({
+  towxml: require('/towxml/index'),
   request: request,
   onLaunch: function () {
     // 登录
@@ -49,6 +50,6 @@ App({
     userInfo: null
   },
 
-  apiUrl: `${apiUrl}/ghost/api/v2`,
+  apiUrl: `${apiUrl}/ghost/api/${apiVersion}`,
   contentAPIKey: contentAPIKey,
 });

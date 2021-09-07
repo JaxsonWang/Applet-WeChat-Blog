@@ -3,6 +3,7 @@ const app = getApp();
 Page({
   data: {
     postData: {},
+    article: {}
   },
   /**
    * 页面加载
@@ -23,7 +24,9 @@ Page({
     };
     app.request.requestGetApi(url, params, self, (response, self) => {
       self.setData({
-        postData: response.posts[0]
+        postData: response.posts[0],
+        article: app.towxml(response.posts[0].html,'html',{
+        })
       })
     }, (response, self) => {
     }, (response, self) => {

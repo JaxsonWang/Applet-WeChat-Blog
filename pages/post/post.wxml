@@ -2,7 +2,7 @@
   <view slot="content">{{ postData.title }}</view>
 </cu-custom>
 <view class="post-view">
-  <wxparse data="{{ postData.html }}" type="html"/>
+  <towxml nodes="{{ article }}" />
 </view>
 <view class="post-view margin-tb-lg">
   <view class="post-copyright">

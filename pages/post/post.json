@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "wxparse": "../../components/wxparse/wxparse"
+    "wxparse": "../../components/wxparse/wxparse",
+    "towxml":"/towxml/towxml"
   }
 }
